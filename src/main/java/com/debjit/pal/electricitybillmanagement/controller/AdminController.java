@@ -2,6 +2,8 @@ package com.debjit.pal.electricitybillmanagement.controller;
 
 import java.io.IOException;
 
+import com.debjit.pal.electricitybillmanagement.dao.CustomerDao;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -24,7 +26,7 @@ public class AdminController extends HttpServlet{
 		String action = request.getParameter("action");
 		if (action.equals("all_customer")) {
 			try {
-				request.setAttribute("customers", customerDao.getAllCustomers());
+				request.setAttribute("customers", CustomerDao.getAllCustomers());
 			} catch (Exception e) {
 				request.setAttribute("err", "Cannot get customer details. Error: " + e.getMessage());
 			}
@@ -33,7 +35,7 @@ public class AdminController extends HttpServlet{
 		} else if (action.equals("delete_customer")) {
 			int consumerId = Integer.parseInt(request.getParameter("consumerId"));
 			try {
-				customerDao.deleteCustomerById(consumerId);
+				CustomerDao.deleteCustomerById(consumerId);
 			} catch (Exception e) {
 				request.setAttribute("err", "Error: " + e.getMessage());
 			}
@@ -48,7 +50,7 @@ public class AdminController extends HttpServlet{
 			String phone = request.getParameter("phone");
 			String address = request.getParameter("address");
 			try {
-				customerDao.update(consumerId, firstName, lastName, email, password, phone, address);
+				CustomerDao.update(consumerId, firstName, lastName, email, password, phone, address);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.debjit.pal.electricitybillmanagement.dao;
+package com.debjit.pal.electricitybillmanagement.repository;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,7 +8,7 @@ import java.util.List;
 import com.debjit.pal.electricitybillmanagement.model.Customer;
 import com.debjit.pal.electricitybillmanagement.util.DbUtility;
 
-public class CustomerDao {
+public class customerRepository {
 
     public static int register(String firstName, String lastName, String email, String password, String phone,
             String address) throws Exception {
