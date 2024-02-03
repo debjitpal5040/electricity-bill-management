@@ -62,7 +62,7 @@
 					</div>
 					<button class="form-control btn btn-primary mb-5" type="submit">Update Details</button>
 					<br><br>
-					If you are customer login <a href="/src/main/webapp/auth/customer_login.jsp">here</a>
+					If you are customer login <a href="/Electricity_Bill_Management/auth/customer_login.jsp">here</a>
 				</form>
 
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"

@@ -35,11 +35,11 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item"><a class="nav-link active" aria-current="page"
-                  href="/src/main/webapp/auth/customer_register.jsp">Register</a></li>
+                  href="/Electricity_Bill_Management/auth/customer_register.jsp">Register</a></li>
               <li class="nav-item"><a class="nav-link active" aria-current="page"
-                  href="/src/main/webapp/auth/customer_login.jsp">Login</a></li>
+                  href="/Electricity_Bill_Management/auth/customer_login.jsp">Login</a></li>
               <li class="nav-item"><a class="nav-link active" aria-current="page"
-                  href="/src/main/webapp/auth/admin_login.jsp">Admin</a></li>
+                  href="/Electricity_Bill_Management/auth/admin_login.jsp">Admin</a></li>
             </ul>
           </div>
         </div>
