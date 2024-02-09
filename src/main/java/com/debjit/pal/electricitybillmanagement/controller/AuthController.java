@@ -2,7 +2,10 @@ package com.debjit.pal.electricitybillmanagement.controller;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.debjit.pal.electricitybillmanagement.model.Customer;
+import com.debjit.pal.electricitybillmanagement.repository.CustomerJDBCRepository;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -19,6 +22,9 @@ public class AuthController extends HttpServlet {
 		super();
 	}
 
+	@Autowired
+    private CustomerJDBCRepository customerJDBCRepository;
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String action = request.getParameter("action");
@@ -30,7 +36,8 @@ public class AuthController extends HttpServlet {
 			String phone = request.getParameter("phone");
 			String address = request.getParameter("address");
 			try {
-				int consumerId = customerDao.register(firstName, lastName, email, password, phone, address);
+				int customerId = 1;
+				int consumerId = customerJDBCRepository.register(new Customer(customerId, firstName, lastName, email, password, phone, address));
 				if (consumerId == -1) {
 					request.setAttribute("err", "Account does not exists!");
 					RequestDispatcher rs = request.getRequestDispatcher("/auth/customer_register.jsp");
@@ -50,7 +57,7 @@ public class AuthController extends HttpServlet {
 			String password = request.getParameter("password");
 
 			try {
-				Customer c = customerDao.login(username, password);
+				Customer c = customerJDBCRepository.login(username, password);
 				if (c != null) {
 					request.setAttribute("myInfo", c);
 					RequestDispatcher rs = request.getRequestDispatcher("/customer/home.jsp");

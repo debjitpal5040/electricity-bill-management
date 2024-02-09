@@ -2,6 +2,11 @@ package com.debjit.pal.electricitybillmanagement.controller;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.debjit.pal.electricitybillmanagement.model.Customer;
+import com.debjit.pal.electricitybillmanagement.repository.CustomerJDBCRepository;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,13 +22,15 @@ public class AdminController extends HttpServlet {
 		super();
 	}
 
+	@Autowired
+    private CustomerJDBCRepository customerJDBCRepository;
+
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String action = request.getParameter("action");
 		if (action.equals("all_customer")) {
 			try {
-				request.setAttribute("customers", customerDao.getAllCustomers());
+				request.setAttribute("customers", customerJDBCRepository.getAllCustomers());
 			} catch (Exception e) {
 				request.setAttribute("err", "Cannot get customer details. Error: " + e.getMessage());
 			}
@@ -32,7 +39,7 @@ public class AdminController extends HttpServlet {
 		} else if (action.equals("delete_customer")) {
 			int consumerId = Integer.parseInt(request.getParameter("consumerId"));
 			try {
-				customerDao.deleteCustomerById(consumerId);
+				customerJDBCRepository.deleteCustomerById(consumerId);
 			} catch (Exception e) {
 				request.setAttribute("err", "Error: " + e.getMessage());
 			}
@@ -47,7 +54,7 @@ public class AdminController extends HttpServlet {
 			String phone = request.getParameter("phone");
 			String address = request.getParameter("address");
 			try {
-				customerDao.update(consumerId, firstName, lastName, email, password, phone, address);
+				customerJDBCRepository.update(new Customer(consumerId, firstName, lastName, email, password, phone, address));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
