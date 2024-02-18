@@ -3,6 +3,8 @@ package com.debjit.pal.electricitybillmanagement.controller;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.debjit.pal.electricitybillmanagement.model.Customer;
 import com.debjit.pal.electricitybillmanagement.repository.CustomerJDBCRepository;
@@ -15,6 +17,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/auth")
+@RestController
+@RequestMapping("/api/v1/")
 public class AuthController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
