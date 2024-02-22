@@ -1,18 +1,12 @@
 <body>
-    <!-- <% int consumerId=Integer.parseInt(request.getParameter("consumerId")); String
-        firstName=request.getParameter("firstName"); String lastName=request.getParameter("lastName"); String
-        email=request.getParameter("email"); String password=request.getParameter("password"); String
-        phone=request.getParameter("phone"); String address=request.getParameter("address"); %> -->
+
     <form class="col-lg-6 p-5 mx-auto mt-5 text-center shadow" action="" method="post">
         <h1 class="text-center mb-5">Update Customer Details</h1>
 
-        <div>
-            <!-- <%= request.getAttribute("err")==null ? "" : request.getAttribute("err") %> -->
-        </div>
 
         <div class="form-floating mb-3 d-none">
-            <input type="text" class="form-control" id="consumerId" name="consumerId" value="">
-            <label for="consumerId">Consumer Id</label>
+            <input type="text" class="form-control" id="customerId" name="customerId" value="">
+            <label for="customerId">Customer Id</label>
         </div>
 
         <div class="form-floating mb-3">
@@ -21,12 +15,12 @@
             <label for="firstName">First Name</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your password"
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your LastName"
                 value="">
             <label for="lastName">Last Name</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your username" value="">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" value="">
             <label for="email">Email</label>
         </div>
         <div class="form-floating mb-3">
@@ -35,17 +29,15 @@
             <label for="password">Password</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your username" value="">
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone" value="">
             <label for="phone">Phone</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="address" name="address" placeholder="Enter your username"
+            <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address"
                 value="">
             <label for="address">Address</label>
         </div>
         <button class="form-control btn btn-primary mb-5" type="submit">Update Details</button>
-        <br><br>
-        If you are customer login <a href="/Electricity_Bill_Management/auth/customer_login.jsp">here</a>
     </form>
 
 </body>

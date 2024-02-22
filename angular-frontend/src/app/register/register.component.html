@@ -34,10 +34,17 @@
                 placeholder="Enter your address" required>
             <label for="address">Address</label>
         </div>
-        <button class="form-control btn btn-primary mb-5" type="submit">Register</button>
-    </form>
+        <a class="text-center mx-auto mt-5 p-5" routerLink="login" routerLinkActive="active">
+            <button class="form-control btn btn-primary mb-5" type="submit">Register</button>
+        </a>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
-        integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </form>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>

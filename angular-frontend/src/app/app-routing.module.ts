@@ -5,13 +5,15 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: 'admin', component: AdminComponent},
   {path: 'login', component: LoginComponent},
-  //{path: '', redirectTo: 'customers', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'register', component: RegisterComponent},
-  { path: 'admin/customer-list', component: CustomerListComponent },
+  {path: 'admin/customer-list', component: CustomerListComponent},
   {path: 'admin/update-customer', component: UpdateCustomerComponent}
 ];
 
