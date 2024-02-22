@@ -1,0 +1,43 @@
+<body>
+
+    <form class="col-lg-6 p-5 mx-auto mt-5 text-center shadow" ngNativeValidate autocomplete="on"
+        (ngSubmit)="onSubmit()">
+        <h1 class="text-center mb-5">Customer Register</h1>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" [(ngModel)]="customer.firstName" id="firstName" name="firstName"
+                placeholder="Enter your firstName" required>
+            <label for="firstName">First Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" [(ngModel)]="customer.lastName" id="lastName" name="lastName"
+                placeholder="Enter your lastName" required>
+            <label for="lastName">Last Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" [(ngModel)]="customer.email" id="email" name="email"
+                placeholder="Enter your email" required>
+            <label for="email">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" [(ngModel)]="customer.password" id="password" name="password"
+                placeholder="Enter your password" required>
+            <label for="password">Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="tel" class="form-control" [(ngModel)]="customer.phone" id="phone" name="phone"
+                placeholder="Enter your phone" required>
+            <label for="phone">Phone</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" [(ngModel)]="customer.address" id="address" name="address"
+                placeholder="Enter your address" required>
+            <label for="address">Address</label>
+        </div>
+        <button class="form-control btn btn-primary mb-5" type="submit">Register</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+        integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
