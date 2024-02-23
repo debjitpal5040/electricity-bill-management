@@ -2,3 +2,73 @@ a {
     text-decoration: none;
     color: black;
 }
+
+.customer {
+    text-align: center;
+    color: black;
+    margin: 50px;
+    font-family: cursive;
+}
+
+.customer:hover {
+    color: green;
+    cursor: pointer;
+    transition: color 0.5s;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    max-width: fit-content;
+    overflow: auto;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgreen;
+}
+
+.delete {
+    padding: 10px 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.delete:hover {
+    background-color: darkred;
+}
+
+.update {
+    padding: 10px 8px;
+    background-color: orange;
+    color: white;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.update:hover {
+    background-color: darkorange;
+}

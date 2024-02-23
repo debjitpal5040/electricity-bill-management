@@ -19,13 +19,13 @@ export class RegisterComponent implements OnInit {
   saveCustomer() {
     this.customerService.createCustomer(this.customer).subscribe(data => {
       console.log(data);
-      this.goToLogin();
+      this.goToCustomerList();
     },
       error => console.log(error));
   }
 
   goToCustomerList() {
-    this.router.navigate(['/customers']);
+    this.router.navigate(['/customer-list']);
   }
 
   goToLogin() {
