@@ -25,11 +25,7 @@ export class RegisterComponent implements OnInit {
   }
 
   goToCustomerList() {
-    this.router.navigate(['/customer-list']);
-  }
-
-  goToLogin() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/admin/customer-list']);
   }
 
   onSubmit() {
