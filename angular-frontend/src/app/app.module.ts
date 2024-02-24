@@ -10,6 +10,7 @@ import { AdminComponent } from './admin/admin.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { HomeComponent } from './home/home.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     AdminComponent,
     CustomerListComponent,
     UpdateCustomerComponent,
-    HomeComponent
+    HomeComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,

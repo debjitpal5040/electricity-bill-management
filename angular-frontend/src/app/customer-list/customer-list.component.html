@@ -11,7 +11,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Address</th>
-            <th colspan="2">Actions</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -35,9 +35,8 @@
                 {{ customer.address }}
             </td>
             <td>
+                <button (click)="customerDetails(customer.customerId)" class="view"> View</button>
                 <button (click)="updateCustomer(customer.customerId)" class="update">Update</button>
-            </td>
-            <td>
                 <button (click)="deleteCustomer(customer.customerId)" class="delete">Delete</button>
             </td>
         </tr>
