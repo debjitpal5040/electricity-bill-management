@@ -1,43 +1,38 @@
-<body>
+<div class="customer">
+    <h3> Update Customer </h3>
+</div>
 
-    <form class="col-lg-6 p-5 mx-auto mt-5 text-center shadow" action="" method="post">
-        <h1 class="text-center mb-5">Update Customer Details</h1>
+<div class="form">
+    <form ngNativeValidate autocomplete="on" (ngSubmit)="onSubmit()">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your firstName"
+            [(ngModel)]="customer.firstName" required><br>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your lastName"
+            [(ngModel)]="customer.lastName" required><br>
 
 
-        <div class="form-floating mb-3 d-none">
-            <input type="text" class="form-control" id="customerId" name="customerId" value="">
-            <label for="customerId">Customer Id</label>
-        </div>
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+            [(ngModel)]="customer.email" required><br>
 
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name"
-                value="">
-            <label for="firstName">First Name</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your LastName"
-                value="">
-            <label for="lastName">Last Name</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" value="">
-            <label for="email">Email</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password"
-                value="">
-            <label for="password">Password</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone" value="">
-            <label for="phone">Phone</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address"
-                value="">
-            <label for="address">Address</label>
-        </div>
-        <button class="form-control btn btn-primary mb-5" type="submit">Update Details</button>
+
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password"
+            [(ngModel)]="customer.password" required><br>
+
+
+        <label for="phone">Phone</label>
+        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone"
+            [(ngModel)]="customer.phone" required><br>
+
+
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address"
+            [(ngModel)]="customer.address" required><br>
+
+        <button class="submit" type="submit">Update</button>
+        <button class="reset" type="reset">Reset</button>
     </form>
-
-</body>
+</div><br>

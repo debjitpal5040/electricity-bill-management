@@ -8,7 +8,7 @@ import { CustomerService } from '../customer.service';
   templateUrl: './customer-details.component.html',
   styleUrl: './customer-details.component.css'
 })
-export class CustomerDetailsComponent implements OnInit{
+export class CustomerDetailsComponent implements OnInit {
   customerId!: number
   customer!: Customer
   constructor(private route: ActivatedRoute, private customerService: CustomerService) { }

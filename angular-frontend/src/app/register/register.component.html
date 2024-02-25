@@ -4,32 +4,33 @@
 
 <div class="form">
     <form ngNativeValidate autocomplete="on" (ngSubmit)="onSubmit()">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your firstName" [(ngModel)]="customer.firstName" required><br>
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your firstName"
+            [(ngModel)]="customer.firstName" required><br>
 
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName"
-            placeholder="Enter your lastName" [(ngModel)]="customer.lastName" required><br>
-
-
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email"
-            placeholder="Enter your email" [(ngModel)]="customer.email" required><br>
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your lastName"
+            [(ngModel)]="customer.lastName" required><br>
 
 
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password"
-            placeholder="Enter your password" [(ngModel)]="customer.password" required><br>
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+            [(ngModel)]="customer.email" required><br>
 
 
-            <label for="phone">Phone</label>
-            <input type="tel" class="form-control" id="phone" name="phone"
-            placeholder="Enter your phone" [(ngModel)]="customer.phone" required><br>
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password"
+            [(ngModel)]="customer.password" required><br>
 
 
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" name="address"
-            placeholder="Enter your address" [(ngModel)]="customer.address" required><br>
+        <label for="phone">Phone</label>
+        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone"
+            [(ngModel)]="customer.phone" required><br>
+
+
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address"
+            [(ngModel)]="customer.address" required><br>
 
         <button class="submit" type="submit">Register</button>
         <button class="reset" type="reset">Reset</button>

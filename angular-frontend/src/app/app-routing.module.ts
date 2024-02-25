@@ -9,12 +9,12 @@ import { HomeComponent } from './home/home.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 const routes: Routes = [
+  { path: 'customers', component: CustomerListComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'register', component: RegisterComponent },
-  { path: 'customers', component: CustomerListComponent },
+  { path: '', redirectTo: 'customers', pathMatch: 'full' },
   { path: 'update-customer/:customerId', component: UpdateCustomerComponent },
   { path: 'customer-details/:customerId', component: CustomerDetailsComponent }
 ];
