@@ -38,5 +38,4 @@ export class CustomerListComponent implements OnInit {
       this.getCustomers();
     })
   }
-
 }
