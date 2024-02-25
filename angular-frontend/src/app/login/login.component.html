@@ -1,47 +1,43 @@
-<body>
-
-    <div class="row">
-        <div class="col-md-6">
-            <form class="col-lg-12 p-5 mx-auto mt-5 text-center shadow form-horizontal" action="" method="post">
-                <h1 class="text-center mb-5">Customer Login</h1>
-
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" name="username"
-                        placeholder="Enter your username">
-                    <label for="floatingInput">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" name="password"
-                        placeholder="Enter your password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <button class="form-control btn btn-primary mb-5" type="submit">Login</button>
-            </form>
+<div class="row">
+    <div class="col-md-6">
+        <div>
+            <h1 class="customer">Customer Login</h1>
         </div>
-        <div class="col-md-6">
-            <form class="col-lg-12 p-5 mx-auto mt-5 text-center shadow" action="" method="post">
-                <h1 class="text-center mb-5">Admin Login</h1>
+        <form class="col-lg-12 p-5 mx-auto mt-5 text-center shadow form-horizontal" ngNativeValidate autocomplete="on"
+            (ngSubmit)="onSubmitCustomer()">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                <label for="email">Email</label>
+            </div>
 
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" name="userName"
-                        placeholder="Enter your userName">
-                    <label for="floatingInput">UserName</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" name="password"
-                        placeholder="Enter your password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <button class="form-control btn btn-primary mb-5" type="submit">Login</button>
-            </form>
-        </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password"
+                    placeholder="Enter your password">
+                <label for="password">Password</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Login</button>&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" type="reset">Reset</button>
+        </form>
     </div>
 
+    <div class="col-md-6">
+        <div>
+            <h1 class="admin">Admin Login</h1>
+        </div>
+        <form class="col-lg-12 p-5 mx-auto mt-5 text-center shadow" ngNativeValidate autocomplete="on"
+            (ngSubmit)="onSubmitAdmin()">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your userName">
+                <label for="userName">UserName</label>
+            </div>
 
-
-
-
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
-integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password"
+                    placeholder="Enter your password">
+                <label for="password">Password</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Login</button>&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" type="reset">Reset</button>
+        </form>
+    </div>
+</div>

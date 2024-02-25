@@ -1,8 +1,3 @@
-<body>
-    <a routerLink="customers" routerLinkActive="active">
-        <input class="text-center btn btn-primary" type="Submit" value="Manage Customer Accounts">
-    </a>
-    <div class="container">
-        <router-outlet></router-outlet>
-    </div>
-</body>
+<div class="manage">
+    <button (click)="manageCustomers()" class="text-center btn btn-primary">Manage Customer Accounts</button>
+</div>

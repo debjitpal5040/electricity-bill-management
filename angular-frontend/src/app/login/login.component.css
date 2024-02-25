@@ -1,0 +1,40 @@
+.customer {
+    text-align: center;
+    color: black;
+    margin: 50px;
+    font-family: cursive;
+}
+
+.customer:hover {
+    color: navy;
+    cursor: pointer;
+    transition: color 0.5s;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.admin {
+    text-align: center;
+    color: black;
+    margin: 50px;
+    font-family: cursive;
+}
+
+.admin:hover {
+    color: navy;
+    cursor: pointer;
+    transition: color 0.5s;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+input[type=text],
+[type=email],
+[type=password] {
+    background-color: lightblue;
+    color: navy;
+}
+
+input:focus {
+    background-color: lightgoldenrodyellow;
+}

@@ -6,7 +6,7 @@
 }
 
 .customer:hover {
-    color: green;
+    color: navy;
     cursor: pointer;
     transition: color 0.5s;
     transform: scale(1.1);
@@ -19,7 +19,7 @@ label {
 }
 
 .card {
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     margin: auto;
     height: 200px;
     width: 60%;
@@ -29,7 +29,7 @@ label {
     cursor: pointer;
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
-    background-color: lightgoldenrodyellow;
+    background-color: gold;
 }
 
 .card-body {

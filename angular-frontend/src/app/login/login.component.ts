@@ -17,8 +17,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  customerLogin() {
+
+  }
   adminLogin() {
-    
+
+  }
+
+  onSubmitCustomer() {
+    console.log(this.customer);
+    this.customerLogin();
+  }
+  onSubmitAdmin() {
+    console.log(this.admin);
+    this.adminLogin();
   }
 
 }

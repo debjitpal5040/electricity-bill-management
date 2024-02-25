@@ -6,7 +6,7 @@
 }
 
 .customer:hover {
-    color: green;
+    color: navy;
     cursor: pointer;
     transition: color 0.5s;
     transform: scale(1.1);
