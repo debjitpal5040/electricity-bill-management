@@ -26,14 +26,18 @@
         </div>
         <form class="col-lg-12 p-5 mx-auto mt-5 text-center shadow" ngNativeValidate autocomplete="on"
             (ngSubmit)="onSubmitAdmin()">
+
+            <p *ngIf="invalidLogin" class="alert alert-danger"> Incorrect userName or password</p>
+
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your userName">
+                <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your userName"
+                    [(ngModel)]="username">
                 <label for="userName">UserName</label>
             </div>
 
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="password" name="password"
-                    placeholder="Enter your password">
+                    placeholder="Enter your password" [(ngModel)]="password">
                 <label for="password">Password</label>
             </div>
             <button class="btn btn-primary" type="submit">Login</button>&nbsp;&nbsp;&nbsp;
