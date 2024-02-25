@@ -30,9 +30,9 @@
                 {{ customer.address }}
             </td>
             <td>
-                <button (click)="customerDetails(customer.customerId)" class="view">View</button>
-                <button (click)="updateCustomer(customer.customerId)" class="update">Update</button>
-                <button (click)="deleteCustomer(customer.customerId)" class="delete">Delete</button>
+                <button (click)="customerDetails(customer.customerId)" class="btn btn-primary">View</button>&nbsp;
+                <button (click)="updateCustomer(customer.customerId)" class="btn btn-warning">Update</button>&nbsp;
+                <button (click)="deleteCustomer(customer.customerId)" class="btn btn-danger">Delete</button>
             </td>
         </tr>
     </tbody>

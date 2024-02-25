@@ -14,12 +14,12 @@
 }
 
 label {
-    color: white;
+    color: black;
     display: inline-block;
 }
 
 .card {
-    background-color: lightseagreen;
+    background-color: lightblue;
     margin: auto;
     height: 200px;
     width: 60%;
@@ -29,13 +29,13 @@ label {
     cursor: pointer;
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
-    background-color: hsl(205, 80%, 34%)
+    background-color: lightgoldenrodyellow;
 }
 
 .card-body {
     position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
-    color: yellow;
+    color: navy;
     text-align: center;
 }

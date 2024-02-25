@@ -33,51 +33,9 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: whitesmoke;
+    background-color: lightyellow;
 }
 
 tr:nth-child(odd) {
-    background-color: lightgreen;
-}
-
-.delete {
-    padding: 10px 10px;
-    background-color: red;
-    color: white;
-    border-radius: 10%;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.delete:hover {
-    background-color: darkred;
-}
-
-.update {
-    padding: 10px 8px;
-    background-color: orange;
-    color: white;
-    border-radius: 10%;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.update:hover {
-    background-color: darkorange;
-}
-
-.view {
-    padding: 10px 8px;
-    background-color: blue;
-    color: white;
-    border-radius: 10%;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.view:hover {
-    background-color: darkblue;
+    background-color: lightseagreen;
 }
