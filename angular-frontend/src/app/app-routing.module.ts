@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: 'customers', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'update-customer/:customerId', component: UpdateCustomerComponent },
   { path: 'customer-details/:customerId', component: CustomerDetailsComponent }
 ];
