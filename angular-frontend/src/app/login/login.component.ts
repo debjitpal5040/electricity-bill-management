@@ -26,9 +26,10 @@ export class LoginComponent implements OnInit {
     ) {
       this.router.navigate(['admin']);
       this.invalidLogin = false;
-    } else
+    } else {
       this.invalidLogin = true;
       console.log("Incorrect userName or password");
+    }
   }
 
   customerLogin() {
