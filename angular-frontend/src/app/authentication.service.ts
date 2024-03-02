@@ -7,7 +7,7 @@ export class AuthenticationService {
 
   constructor() { }
 
-  authenticate(username: string, password: string) {
+  authenticate(username: string, password: string): boolean {
     if (username === "admin" && password === "admin") {
       sessionStorage.setItem('username', username)
       return true;
@@ -16,13 +16,13 @@ export class AuthenticationService {
     }
   }
 
-  isUserLoggedIn() {
+  isUserLoggedIn(): boolean {
     let user = sessionStorage.getItem('username')
     console.log(!(user === null))
     return !(user === null)
   }
 
-  logOut() {
+  logOut(): void {
     sessionStorage.removeItem('username')
   }
 }

@@ -50,19 +50,16 @@ public class CustomerController {
     }
 
     // update customer rest api
-
     @PutMapping("/customers/{customerId}")
     public ResponseEntity<Customer> updateCustomer(@PathVariable @NonNull Long customerId, @RequestBody Customer customerDetails) {
         Customer customer = customerRepository.findById(customerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer does not exist with customerId :" + customerId));
-
         customer.setFirstName(customerDetails.getFirstName());
         customer.setLastName(customerDetails.getLastName());
         customer.setEmail(customerDetails.getEmail());
         customer.setPassword(customerDetails.getPassword());
         customer.setPhone(customerDetails.getPhone());
         customer.setAddress(customerDetails.getAddress());
-
         Customer updatedCustomer = customerRepository.save(customer);
         return ResponseEntity.ok(updatedCustomer);
     }
@@ -73,11 +70,9 @@ public class CustomerController {
     public ResponseEntity<Map<String, Boolean>> deleteCustomer(@PathVariable @NonNull Long customerId) {
         Customer customer = customerRepository.findById(customerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer does not exist with customerId :" + customerId));
-
         customerRepository.delete(customer);
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
     }
-
 }
