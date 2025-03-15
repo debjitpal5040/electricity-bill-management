@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../customer.service';
 import { Customer } from '../customer';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-update-customer',
   templateUrl: './update-customer.component.html',
-  styleUrl: './update-customer.component.css'
+  styleUrl: './update-customer.component.css',
+  standalone: true,
+  imports: [FormsModule]
 })
 export class UpdateCustomerComponent implements OnInit {
 

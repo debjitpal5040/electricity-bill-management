@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  standalone: true,
+  imports: [RouterModule, CommonModule]
 })
 export class AppComponent implements OnInit {
   title = 'angular-frontend';

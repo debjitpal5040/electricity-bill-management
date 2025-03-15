@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Customer } from '../customer';
 import { CustomerService } from '../customer.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrl: './register.component.css',
+  standalone: true,
+  imports: [FormsModule]
 })
 export class RegisterComponent implements OnInit {
   customer: Customer = new Customer();

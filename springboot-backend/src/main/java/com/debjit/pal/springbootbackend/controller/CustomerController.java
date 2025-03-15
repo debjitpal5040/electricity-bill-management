@@ -65,7 +65,7 @@ public class CustomerController {
     }
 
     // delete customer rest api
-    @SuppressWarnings("null")
+    
     @DeleteMapping("/customers/{customerId}")
     public ResponseEntity<Map<String, Boolean>> deleteCustomer(@PathVariable @NonNull Long customerId) {
         Customer customer = customerRepository.findById(customerId)

@@ -14,6 +14,13 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
 
 @NgModule({
   declarations: [
+
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     AppComponent,
     RegisterComponent,
     LoginComponent,
@@ -22,12 +29,6 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
     UpdateCustomerComponent,
     HomeComponent,
     CustomerDetailsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

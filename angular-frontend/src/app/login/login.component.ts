@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../customer';
-import { Admin } from '../admin';
-import { CustomerService } from '../customer.service';
-import { AdminService } from '../admin.service';
 import { AuthenticationService } from '../authentication.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
+  standalone: true,
+  imports: [FormsModule, CommonModule]
 })
 export class LoginComponent implements OnInit {
-  customer: Customer = new Customer();
-  admin: Admin = new Admin();
   username = ''
   password = ''
   invalidLogin = false
-  constructor(private customerService: CustomerService, private adminService: AdminService, private authenticationService: AuthenticationService, private router: Router) { }
+  constructor(private authenticationService: AuthenticationService, private router: Router) { }
   ngOnInit(): void {
   }
 
@@ -32,17 +30,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  customerLogin() {
-
-  }
-
-
-  onSubmitCustomer() {
-    console.log(this.customer);
-    this.customerLogin();
-  }
   onSubmitAdmin() {
-    console.log(this.admin);
+    console.log("Admin logged in");
     this.adminLogin();
   }
 
